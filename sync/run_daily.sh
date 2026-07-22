@@ -7,6 +7,9 @@ cd "$(dirname "$0")/.."
 # No tokens yet -> setup hasn't been run; exit quietly.
 [ -f sync/tokens.json ] || exit 0
 
+# The phone Shortcut may have pushed readings via GitHub Actions — sync first.
+git pull --rebase --quiet || true
+
 sync/.venv/bin/python sync/pull_odometer.py pull
 
 if ! git diff --quiet -- sync/readings.json 2>/dev/null || \

@@ -1,0 +1,51 @@
+name: Log odometer from phone
+# Triggered by the iPhone Shortcut via repository_dispatch.
+# Payload: {"event_type":"odometer","client_payload":{"odometer":"8,432","date":"2026-07-21"}}
+on:
+  repository_dispatch:
+    types: [odometer]
+
+permissions:
+  contents: write
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Merge reading into sync/readings.json
+        env:
+          ODO: ${{ github.event.client_payload.odometer }}
+          DAY: ${{ github.event.client_payload.date }}
+        run: |
+          python3 - << 'EOF'
+          import json, os, re, sys
+          from datetime import date
+          raw = str(os.environ.get("ODO", ""))
+          digits = re.sub(r"[^\d]", "", raw)
+          if not digits:
+              sys.exit(f"No digits in odometer payload: {raw!r}")
+          odo = int(digits)
+          if not (0 < odo < 1_000_000):
+              sys.exit(f"Implausible odometer: {odo}")
+          day = str(os.environ.get("DAY", "")).strip()
+          if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", day):
+              day = date.today().isoformat()
+          path = "sync/readings.json"
+          readings = json.load(open(path)) if os.path.exists(path) else []
+          existing = next((r for r in readings if r["date"] == day), None)
+          if existing:
+              existing["odometer"] = odo
+          else:
+              readings.append({"date": day, "odometer": odo})
+          readings.sort(key=lambda r: r["date"])
+          with open(path, "w") as f:
+              json.dump(readings, f, indent=1)
+          print(f"Recorded {day}: {odo} mi ({len(readings)} readings)")
+          EOF
+      - name: Commit and push if changed
+        run: |
+          git config user.name "odometer-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add sync/readings.json
+          git diff --cached --quiet || { git commit -m "odometer from phone shortcut"; git push; }
