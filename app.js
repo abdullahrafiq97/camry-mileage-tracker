@@ -636,6 +636,19 @@
     } catch (e) { /* offline or not deployed with sync — fine */ }
   }
 
+  // iOS resumes the installed PWA without reloading the page, so re-pull synced
+  // readings and re-render (date may have rolled over) whenever we come back.
+  function refreshOnResume() {
+    if (document.visibilityState !== 'visible' || !state.settings) return;
+    pullSyncedReadings();
+    const current = views.find((v) => !$('view-' + v).hidden);
+    if (current === 'dashboard') renderDashboard();
+    if (current === 'history') renderHistory();
+    if (current === 'stats') renderStats();
+  }
+  document.addEventListener('visibilitychange', refreshOnResume);
+  window.addEventListener('focus', refreshOnResume);
+
   // ---------- Boot ----------
   show(state.settings ? 'dashboard' : 'setup');
   if (state.settings) pullSyncedReadings();

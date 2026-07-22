@@ -1,5 +1,5 @@
 /* Offline cache for the mileage tracker PWA. Bump VERSION when files change. */
-const VERSION = 'v7';
+const VERSION = 'v8';
 const CACHE = 'mileage-' + VERSION;
 const ASSETS = [
   '.',
