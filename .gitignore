@@ -1,0 +1,10 @@
+# Secrets — never publish (the repo is public for free GitHub Pages)
+sync/tokens.json
+
+# Local-only
+sync/.venv/
+.claude/
+.DS_Store
+
+# Personal spreadsheet stays local
+Car Mileage tracker.xlsx

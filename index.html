@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0d10">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Camry SE · Mileage</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wordmark">
+    <span class="brand">CAMRY</span><span class="se-badge">SE</span>
+  </div>
+  <div class="trim-chip">2026 · HEAVY METAL</div>
+</header>
+
+<!-- Car silhouette divider -->
+<div class="car-strip" aria-hidden="true">
+  <svg viewBox="0 0 560 186" preserveAspectRatio="xMidYMax meet">
+    <defs>
+      <linearGradient id="paint" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#828c98"/>
+        <stop offset=".38" stop-color="#4d545c"/>
+        <stop offset=".55" stop-color="#31363d"/>
+        <stop offset=".72" stop-color="#4a5058"/>
+        <stop offset="1" stop-color="#191c20"/>
+      </linearGradient>
+      <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#11141a"/>
+        <stop offset=".7" stop-color="#252a33"/>
+        <stop offset="1" stop-color="#3a414c"/>
+      </linearGradient>
+    </defs>
+    <!-- body with punched wheel arches -->
+    <path fill="url(#paint)" fill-rule="evenodd" d="M48 152
+      C 42 146 41 132 45 122
+      C 49 112 66 106 102 102
+      C 136 98 166 96 192 94
+      C 212 68 246 50 288 46
+      C 322 43 352 47 384 59
+      C 414 71 444 81 478 87
+      C 504 91 517 98 521 107
+      C 525 118 523 136 515 148
+      C 498 154 476 156 454 156
+      L 66 156
+      C 56 156 50 155 48 152 Z
+      M 118 135 a 42 42 0 1 0 84 0 a 42 42 0 1 0 -84 0 Z
+      M 408 135 a 42 42 0 1 0 84 0 a 42 42 0 1 0 -84 0 Z"/>
+    <!-- greenhouse -->
+    <path fill="url(#glass)" d="M198 90
+      C 216 68 248 52 288 49
+      C 320 47 348 51 378 62
+      L 366 66
+      C 338 56 314 53 290 55
+      C 254 58 228 71 212 90 Z
+      M 218 90 C 234 72 258 60 292 58 C 316 56 340 60 362 68 L 350 88 Z"/>
+    <!-- beltline highlight -->
+    <path d="M190 92 C 280 86 400 86 470 90" fill="none" stroke="#9aa3ae" stroke-width="1.4" opacity=".45"/>
+    <!-- hood crease -->
+    <path d="M60 112 C 100 105 150 100 186 98" fill="none" stroke="#9aa3ae" stroke-width="1" opacity=".3"/>
+    <!-- side mirror -->
+    <path d="M196 88 l 12 -7 l 6 4 l -4 6 Z" fill="#3d434b"/>
+    <!-- rocker shadow -->
+    <rect x="80" y="151" width="380" height="5" rx="2.5" fill="#0a0b0d"/>
+    <!-- lower front intake -->
+    <path d="M42 132 C 46 140 50 146 56 150 L 74 152 C 62 146 54 138 50 130 Z" fill="#14171b"/>
+    <!-- slim LED headlight -->
+    <path d="M50 111 C 66 106 86 103 106 101.5 L 103 108 C 84 109 66 112 55 115 Z" fill="#e6edf5" opacity=".95"/>
+    <path d="M50 118 L 78 114 L 77 116.5 L 52 120.5 Z" fill="#9aa3ae" opacity=".5"/>
+    <!-- taillight blade -->
+    <path d="M508 100 C 516 103 521 108 522 114 L 516 120 C 514 112 510 106 504 103 Z" fill="#eb0a1e" opacity=".92"/>
+    <!-- trunk spoiler lip -->
+    <path d="M480 86 C 500 89 514 95 521 103 L 522 98 C 515 91 500 86 484 84 Z" fill="#101216"/>
+    <!-- wheels: dark SE alloys -->
+    <g>
+      <g transform="translate(160 135)">
+        <circle r="35" fill="#101216" stroke="#22262c" stroke-width="2"/>
+        <circle r="21" fill="#171a1f" stroke="#8f98a3" stroke-width="2.5"/>
+        <g stroke="#7d8894" stroke-width="3" stroke-linecap="round">
+          <line x1="0" y1="-6" x2="0" y2="-18"/><line x1="5.7" y1="-1.9" x2="17.1" y2="-5.6"/>
+          <line x1="3.5" y1="4.9" x2="10.6" y2="14.6"/><line x1="-3.5" y1="4.9" x2="-10.6" y2="14.6"/>
+          <line x1="-5.7" y1="-1.9" x2="-17.1" y2="-5.6"/>
+        </g>
+        <circle r="4.5" fill="#8f98a3"/>
+      </g>
+      <g transform="translate(450 135)">
+        <circle r="35" fill="#101216" stroke="#22262c" stroke-width="2"/>
+        <circle r="21" fill="#171a1f" stroke="#8f98a3" stroke-width="2.5"/>
+        <g stroke="#7d8894" stroke-width="3" stroke-linecap="round">
+          <line x1="0" y1="-6" x2="0" y2="-18"/><line x1="5.7" y1="-1.9" x2="17.1" y2="-5.6"/>
+          <line x1="3.5" y1="4.9" x2="10.6" y2="14.6"/><line x1="-3.5" y1="4.9" x2="-10.6" y2="14.6"/>
+          <line x1="-5.7" y1="-1.9" x2="-17.1" y2="-5.6"/>
+        </g>
+        <circle r="4.5" fill="#8f98a3"/>
+      </g>
+    </g>
+    <!-- ground shadow -->
+    <ellipse cx="290" cy="176" rx="250" ry="6" fill="#000" opacity=".35"/>
+  </svg>
+</div>
+
+<main id="main">
+
+  <!-- ============ SETUP (first run / settings) ============ -->
+  <section id="view-setup" class="view" hidden>
+    <h2 id="setup-title" class="section-title">Lease setup</h2>
+    <form id="setup-form" class="card form">
+      <label>Lease start date
+        <input type="date" id="set-start-date" required>
+      </label>
+      <label>Starting odometer (miles)
+        <input type="number" id="set-start-odo" inputmode="numeric" min="0" step="1" value="0" required>
+      </label>
+      <label>Annual mileage allowance
+        <input type="number" id="set-allowance" inputmode="numeric" min="1" step="1" value="12000" required>
+      </label>
+      <label>Lease term (months)
+        <input type="number" id="set-term" inputmode="numeric" min="1" step="1" value="36" required>
+      </label>
+      <button type="submit" class="btn primary">Save</button>
+      <button type="button" id="setup-cancel" class="btn" hidden>Cancel</button>
+    </form>
+
+    <div id="data-tools" class="card form" hidden>
+      <h3>Your data</h3>
+      <div class="row-buttons">
+        <button type="button" id="btn-export" class="btn">Export backup</button>
+        <button type="button" id="btn-import" class="btn">Import backup</button>
+        <input type="file" id="import-file" accept="application/json" hidden>
+      </div>
+      <button type="button" id="btn-reset" class="btn danger">Erase all data</button>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD ============ -->
+  <section id="view-dashboard" class="view" hidden>
+
+    <div id="hero" class="card cluster">
+      <svg id="gauge" viewBox="0 0 300 190" aria-label="Mileage balance gauge">
+        <g id="gauge-ticks"></g>
+        <path id="gauge-track" fill="none" stroke-linecap="round"></path>
+        <path id="gauge-arc" fill="none" stroke-linecap="round"></path>
+        <g id="gauge-needle">
+          <line x1="150" y1="152" x2="150" y2="46" stroke-width="3.5" stroke-linecap="round"></line>
+          <circle cx="150" cy="152" r="9"></circle>
+          <circle cx="150" cy="152" r="3.5" class="hub-dot"></circle>
+        </g>
+        <g id="gauge-labels"></g>
+      </svg>
+      <div class="cluster-readout">
+        <div id="hero-value" class="digits">+0.0</div>
+        <div id="hero-label">MILES BANKED</div>
+        <div id="hero-sub"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bar-row">
+        <div class="bar-head"><span>MILES USED</span><span id="pct-miles" class="digits-sm">0%</span></div>
+        <div class="bar"><div id="bar-miles" class="bar-fill miles"></div><div id="tick-time" class="bar-tick"></div></div>
+        <div class="bar-foot"><span>▲ marker = lease time elapsed</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-head"><span>LEASE TIME ELAPSED</span><span id="pct-time" class="digits-sm">0%</span></div>
+        <div class="bar"><div id="bar-time" class="bar-fill time"></div></div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="card stat"><div class="stat-num digits" id="stat-driven">0</div><div class="stat-cap">MILES DRIVEN</div></div>
+      <div class="card stat"><div class="stat-num digits" id="stat-days-left">0</div><div class="stat-cap">DAYS REMAINING</div></div>
+      <div class="card stat"><div class="stat-num digits" id="stat-rate">0</div><div class="stat-cap">MI/DAY ALLOTTED</div></div>
+      <div class="card stat"><div class="stat-num digits" id="stat-pace">0</div><div class="stat-cap">MI/DAY TO STAY ON BUDGET</div></div>
+    </div>
+
+    <div class="card">
+      <h3 class="panel-title">BALANCE OVER TIME <span class="panel-sub">banked miles at each reading</span></h3>
+      <div id="trend-wrap"><svg id="trend" viewBox="0 0 320 150" aria-label="Surplus and deficit trend"></svg></div>
+      <div id="trend-tip" class="trend-tip" hidden></div>
+      <p id="trend-empty" class="muted" hidden>Log at least one reading to see the trend.</p>
+    </div>
+
+    <div class="lease-line" id="lease-chip"></div>
+  </section>
+
+  <!-- ============ LOG ============ -->
+  <section id="view-log" class="view" hidden>
+    <h2 class="section-title">Log a reading</h2>
+
+    <div class="card form">
+      <button type="button" id="btn-scan" class="btn scan">
+        <svg viewBox="0 0 24 24" class="btn-ico"><path fill="currentColor" d="M9 3 7.2 5H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9Zm3 5.5A5 5 0 1 1 7 13.5a5 5 0 0 1 5-5Zm0 2A3 3 0 1 0 15 13.5 3 3 0 0 0 12 10.5Z"/></svg>
+        Scan a screenshot
+      </button>
+      <input type="file" id="scan-file" accept="image/*" hidden>
+      <p class="muted small">Upload (or paste) a screenshot of the Toyota app showing “Odometer … mi”. The number is read on your device — nothing leaves your phone.</p>
+      <div id="ocr-status" class="ocr-status" hidden></div>
+      <div id="ocr-result" class="ocr-result" hidden>
+        <div id="ocr-badge" class="badge"></div>
+        <div class="ocr-value">Detected: <strong id="ocr-value" class="digits-sm"></strong> mi</div>
+        <img id="ocr-preview" alt="Screenshot preview">
+        <p class="muted small">Check the value below before saving — it’s pre-filled, not saved yet.</p>
+      </div>
+    </div>
+
+    <form id="log-form" class="card form">
+      <label>Date
+        <input type="date" id="log-date" required>
+      </label>
+      <label>Odometer reading (miles)
+        <input type="number" id="log-odo" inputmode="numeric" min="0" step="1" required placeholder="e.g. 101">
+      </label>
+      <div id="log-warning" class="warning" hidden></div>
+      <button type="submit" class="btn primary" id="log-save">Save reading</button>
+    </form>
+  </section>
+
+  <!-- ============ HISTORY ============ -->
+  <section id="view-history" class="view" hidden>
+    <h2 class="section-title">History</h2>
+    <ul id="history-list" class="history"></ul>
+    <p id="history-empty" class="muted" hidden>No readings yet.</p>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section id="view-stats" class="view" hidden>
+    <h2 class="section-title">This year</h2>
+    <div id="year-hero" class="card year-hero"></div>
+
+    <h2 class="section-title">Lease total</h2>
+    <div id="total-stats" class="card"></div>
+
+    <h2 class="section-title">All years</h2>
+    <div id="year-list"></div>
+  </section>
+
+</main>
+
+<nav class="tabbar">
+  <button data-view="dashboard" class="tab active">
+    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a9 9 0 0 0-9 9 8.9 8.9 0 0 0 1.2 4.5 1 1 0 0 0 .87.5h13.86a1 1 0 0 0 .87-.5A8.9 8.9 0 0 0 21 13a9 9 0 0 0-9-9Zm0 2a7 7 0 0 1 7 7 6.9 6.9 0 0 1-.7 3H5.7a6.9 6.9 0 0 1-.7-3 7 7 0 0 1 7-7Zm4.24 2.76-3.53 3.53a1.5 1.5 0 1 0 1.41 1.41l3.54-3.52-1.42-1.42Z"/></svg>
+    <span>Cluster</span>
+  </button>
+  <button data-view="log" class="tab">
+    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4Z"/></svg>
+    <span>Log</span>
+  </button>
+  <button data-view="history" class="tab">
+    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M13 3a9 9 0 0 0-9 9H1l3.9 3.9L8.8 12H6a7 7 0 1 1 2.1 5l-1.4 1.4A9 9 0 1 0 13 3Zm-1 5v5l4.25 2.5.75-1.23-3.5-2.07V8Z"/></svg>
+    <span>History</span>
+  </button>
+  <button data-view="stats" class="tab">
+    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M5 9h3v11H5V9Zm5.5-5h3v16h-3V4ZM16 13h3v7h-3v-7Z"/></svg>
+    <span>Stats</span>
+  </button>
+  <button data-view="setup" class="tab">
+    <svg viewBox="0 0 24 24"><path fill="currentColor" d="m19.4 13 .1-1-.1-1 2.1-1.6a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.5 1a7.3 7.3 0 0 0-1.7-1L14.5 2.5a.5.5 0 0 0-.5-.42h-4a.5.5 0 0 0-.5.42l-.32 2.58a7.3 7.3 0 0 0-1.7 1l-2.5-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .1.64L4.6 11l-.1 1 .1 1-2.1 1.6a.5.5 0 0 0-.12.64l2 3.46c.13.22.4.3.61.22l2.5-1a7.3 7.3 0 0 0 1.7 1l.31 2.58a.5.5 0 0 0 .5.42h4a.5.5 0 0 0 .5-.42l.32-2.58a7.3 7.3 0 0 0 1.7-1l2.5 1c.22.08.48 0 .6-.22l2-3.46a.5.5 0 0 0-.11-.64L19.4 13ZM12 15.5A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 15.5Z"/></svg>
+    <span>Setup</span>
+  </button>
+</nav>
+
+<!-- Edit-entry dialog -->
+<dialog id="edit-dialog">
+  <form id="edit-form" class="form" method="dialog">
+    <h3>Edit reading</h3>
+    <label>Date <input type="date" id="edit-date" required></label>
+    <label>Odometer <input type="number" id="edit-odo" inputmode="numeric" min="0" step="1" required></label>
+    <div class="row-buttons">
+      <button type="button" id="edit-cancel" class="btn">Cancel</button>
+      <button type="submit" class="btn primary">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
