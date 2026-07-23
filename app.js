@@ -619,11 +619,17 @@
       if (!res.ok) return;
       const readings = await res.json();
       if (!Array.isArray(readings)) return;
-      const have = new Set(state.entries.map((e) => e.date));
+      const byDate = new Map(state.entries.map((e) => [e.date, e]));
       let added = 0;
       for (const r of readings) {
-        if (r && typeof r.date === 'string' && Number.isFinite(r.odometer) && !have.has(r.date)) {
+        if (!r || typeof r.date !== 'string' || !Number.isFinite(r.odometer)) continue;
+        const existing = byDate.get(r.date);
+        if (!existing) {
           state.entries.push({ id: 'sync-' + r.date, date: r.date, odometer: r.odometer });
+          added++;
+        } else if (existing.id.startsWith('sync-') && existing.odometer !== r.odometer) {
+          // A later same-day sync overwrites an earlier one; manual entries win.
+          existing.odometer = r.odometer;
           added++;
         }
       }
